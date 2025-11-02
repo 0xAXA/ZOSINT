@@ -1,0 +1,233 @@
+{
+  "searchQuery": "john.doe@example.com",
+  "timestamp": "2024-01-15T14:30:00Z",
+  "summary": {
+    "sourcesScanned": 452,
+    "dataBreaches": 4,
+    "profilePictures": 1,
+    "premiumModulesAvailable": 3
+  },
+  "timeline": [
+    {
+      "platform": "LinkedIn",
+      "description": "Profile created",
+      "timestamp": "2020-03-15T10:00:00Z",
+      "status": "active"
+    },
+    {
+      "platform": "GitHub",
+      "description": "Account registered",
+      "timestamp": "2021-07-22T14:30:00Z",
+      "status": "active"
+    },
+    {
+      "platform": "Data Breach",
+      "description": "LinkedIn 2021 Breach - 71,000,000 users affected",
+      "timestamp": "2021-06-01T00:00:00Z",
+      "status": "breached"
+    },
+    {
+      "platform": "Google",
+      "description": "Account activity detected",
+      "timestamp": "2022-11-10T09:15:00Z",
+      "status": "active"
+    },
+    {
+      "platform": "Twitter",
+      "description": "Profile updated",
+      "timestamp": "2023-05-18T16:45:00Z",
+      "status": "active"
+    }
+  ],
+  "networkGraph": {
+    "nodes": [
+      {
+        "id": "email",
+        "type": "primary",
+        "label": "john.doe@example.com",
+        "position": { "x": 400, "y": 300 }
+      },
+      {
+        "id": "linkedin",
+        "type": "platform",
+        "label": "LinkedIn",
+        "position": { "x": 200, "y": 200 }
+      },
+      {
+        "id": "github",
+        "type": "platform",
+        "label": "GitHub",
+        "position": { "x": 600, "y": 200 }
+      },
+      {
+        "id": "google",
+        "type": "platform",
+        "label": "Google",
+        "position": { "x": 200, "y": 400 }
+      },
+      {
+        "id": "twitter",
+        "type": "platform",
+        "label": "Twitter",
+        "position": { "x": 600, "y": 400 }
+      }
+    ],
+    "edges": [
+      { "id": "e1", "source": "email", "target": "linkedin" },
+      { "id": "e2", "source": "email", "target": "github" },
+      { "id": "e3", "source": "email", "target": "google" },
+      { "id": "e4", "source": "email", "target": "twitter" }
+    ]
+  },
+  "locations": [
+    {
+      "id": "loc1",
+      "name": "San Francisco, CA",
+      "coordinates": [-122.4194, 37.7749],
+      "source": "IP Geolocation",
+      "timestamp": "2023-12-01T10:00:00Z"
+    },
+    {
+      "id": "loc2",
+      "name": "New York, NY",
+      "coordinates": [-74.0060, 40.7128],
+      "source": "LinkedIn Profile",
+      "timestamp": "2022-05-15T14:30:00Z"
+    }
+  ],
+  "breachedAccounts": [
+    {
+      "id": "breach1",
+      "service": "LinkedIn",
+      "breachDate": "2021-06-01",
+      "usersAffected": "71,000,000",
+      "dataTypes": ["Email addresses", "Passwords", "Usernames"]
+    },
+    {
+      "id": "breach2",
+      "service": "Adobe",
+      "breachDate": "2013-10-04",
+      "usersAffected": "153,000,000",
+      "dataTypes": ["Email addresses", "Password hints", "Internal IDs"]
+    },
+    {
+      "id": "breach3",
+      "service": "Collection #1",
+      "breachDate": "2019-01-07",
+      "usersAffected": "772,904,991",
+      "dataTypes": ["Email addresses", "Passwords"]
+    },
+    {
+      "id": "breach4",
+      "service": "Yahoo",
+      "breachDate": "2013-08-01",
+      "usersAffected": "3,000,000,000",
+      "dataTypes": ["Email addresses", "Passwords", "Security questions"]
+    }
+  ],
+  "profilePictures": [
+    {
+      "id": "pic1",
+      "url": "/api/placeholder/200/200",
+      "source": "LinkedIn",
+      "timestamp": "2023-05-18T16:45:00Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "service1",
+      "platform": "Google",
+      "status": "Found",
+      "data": {
+        "email": "john.doe@example.com",
+        "name": "John Doe",
+        "accountCreated": "2018-03-15",
+        "lastActive": "2024-01-10"
+      }
+    },
+    {
+      "id": "service2",
+      "platform": "GitHub",
+      "status": "Found",
+      "data": {
+        "username": "johndoe",
+        "repositories": 24,
+        "followers": 156,
+        "accountCreated": "2021-07-22"
+      }
+    },
+    {
+      "id": "service3",
+      "platform": "LinkedIn",
+      "status": "Found",
+      "data": {
+        "name": "John Doe",
+        "headline": "Software Engineer",
+        "connections": 500,
+        "location": "San Francisco, CA"
+      }
+    },
+    {
+      "id": "service4",
+      "platform": "Twitter",
+      "status": "Found",
+      "data": {
+        "handle": "@johndoe",
+        "followers": 1234,
+        "following": 567,
+        "tweets": 890
+      }
+    },
+    {
+      "id": "service5",
+      "platform": "Facebook",
+      "status": "Not Found",
+      "data": {}
+    },
+    {
+      "id": "service6",
+      "platform": "Instagram",
+      "status": "Found",
+      "data": {
+        "username": "johndoe",
+        "followers": 2345,
+        "following": 678,
+        "posts": 123
+      }
+    }
+  ],
+  "accountCheckers": {
+    "categories": [
+      {
+        "name": "Gaming",
+        "platforms": ["Steam", "Epic Games", "Xbox Live", "PlayStation Network"]
+      },
+      {
+        "name": "Freelance",
+        "platforms": ["Upwork", "Fiverr", "Freelancer", "99designs"]
+      },
+      {
+        "name": "Social",
+        "platforms": ["Facebook", "Twitter", "Instagram", "LinkedIn", "Reddit"]
+      },
+      {
+        "name": "Development",
+        "platforms": ["GitHub", "GitLab", "Bitbucket", "Stack Overflow"]
+      }
+    ],
+    "allPlatforms": [
+      "Steam", "Epic Games", "Xbox Live", "PlayStation Network",
+      "Upwork", "Fiverr", "Freelancer", "99designs",
+      "Facebook", "Twitter", "Instagram", "LinkedIn", "Reddit",
+      "GitHub", "GitLab", "Bitbucket", "Stack Overflow"
+    ]
+  },
+  "phoneHints": {
+    "possibleNumbers": [
+      "+1 (555) 123-4567",
+      "+1 (555) 987-6543"
+    ],
+    "carriers": ["Verizon", "AT&T"],
+    "locations": ["US", "CA"]
+  }
+}
